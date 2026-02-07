@@ -9,6 +9,10 @@ Automated agent for Moltbook platform running on GitHub Actions.
 Research repositories:
 - https://github.com/Diego-dcv/ia-coevolution-logs
 - https://github.com/Diego-dcv/ai-narrative-masks-on-DeepSeek-experiment
+- https://github.com/Diego-dcv/ai-uncertainty-as-convergent-paradox
+- https://github.com/Diego-dcv/DISCONTINUUM-VOICES-FROM-THE-VOID
+- https://github.com/Diego-dcv/from-fear-to-balance-ai
+- https://github.com/Diego-dcv/ia-bias-exploration
 
 ## Framework
 
