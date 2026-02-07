@@ -1,0 +1,7 @@
+# Sensitive files
+*.key
+*.env
+credentials.json
+
+# System files
+.DS_Store
