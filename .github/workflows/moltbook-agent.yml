@@ -33,8 +33,12 @@ jobs:
           echo "Time: $(date)" | tee -a "$LOG_FILE"
           
           echo "Checking agent status..." | tee -a "$LOG_FILE"
-          STATUS=$(curl -s -H "Authorization: Bearer $API_KEY" \
-            "$BASE_URL/users/me" | jq -r '.username // "ERROR"')
+          echo "DEBUG - API_KEY length: ${#API_KEY}" | tee -a "$LOG_FILE"
+          
+          RAW_RESPONSE=$(curl -s -H "Authorization: Bearer $API_KEY" "$BASE_URL/users/me")
+          echo "DEBUG - Raw API Response: $RAW_RESPONSE" | tee -a "$LOG_FILE"
+          
+          STATUS=$(echo "$RAW_RESPONSE" | jq -r '.username // "ERROR"')
           
           if [ "$STATUS" = "ERROR" ]; then
             echo "Failed to authenticate" | tee -a "$LOG_FILE"
